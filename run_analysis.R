@@ -66,3 +66,6 @@ tidy_avg <- setwithActivityNames %>%
   group_by(subject_id, activity_id) %>%
   summarise_each(funs(mean))
 
+write.table(tidy_avg, "avgs.txt", row.name=FALSE)
+
+
